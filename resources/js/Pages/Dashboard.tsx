@@ -18,6 +18,7 @@ export default function Dashboard({ auth, users }: PageProps) {
                 <div className="grid gap-4 px-8 xl:grid-cols-4">
                     <MonthlyRevenue />
                     <UserEngagement />
+                    <UserEngagement />
                     <div className="grid w-full grid-flow-row auto-rows-max grid-cols-4 gap-4 xl:col-span-4">
                         <SalesChart className="col-span-2 h-full" />
                         <VisitorChart className="col-span-2 h-full" />
