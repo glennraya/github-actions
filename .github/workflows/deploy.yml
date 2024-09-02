@@ -26,6 +26,9 @@ jobs:
         node-version: '20'
 
     - name: Install NPM Dependencies
+      run: npm install
+
+    - name: Build NPM Assets
       run: npm run build
 
     - name: Synchronize Files To Server
