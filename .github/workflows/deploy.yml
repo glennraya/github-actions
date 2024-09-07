@@ -38,7 +38,7 @@ jobs:
         SOURCE: "."
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
-        TARGET: "/var/www/html/glennraya.com"
+        TARGET: "/var/www/html/github-actions"
 
     - name: Run Remote/Artisan Commands
       uses: appleboy/ssh-action@v0.1.6
@@ -47,6 +47,6 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /var/www/html/glennraya.com
+          cd /var/www/html/github-actions
           php artisan migrate --force
           php artisan optimize
